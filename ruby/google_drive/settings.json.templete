@@ -1,0 +1,7 @@
+{
+	// Google Sheets API の設定 json ファイルのパス
+	"google_api_config": "",
+
+	// スプレッドシートキー
+	"gsheet_key": ""
+}
