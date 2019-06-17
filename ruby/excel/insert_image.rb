@@ -18,7 +18,7 @@ begin
   Dir.glob("#{WORKING_DIRECTORY_PATH}/[^~]*.xlsx").each do |xlsx|
     # xlsx ファイルを開く
     book = excel.Workbooks.Open(xlsx)
-    puts "#{xlsx} was opened."
+    puts "#{xlsx} opened."
 
     # シートを取得
     sheet = book.sheets[1]
@@ -43,7 +43,7 @@ begin
 
     # xlsx ファイルを閉じる
     book.Close
-    puts "#{xlsx} was closed."
+    puts "#{xlsx} closed."
   end
 rescue
   puts "Exception:"
