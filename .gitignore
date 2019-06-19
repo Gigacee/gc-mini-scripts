@@ -1,2 +1,7 @@
+# 動作テスト用のファイル
+*.mp3
+*.wav
 *.xlsx
+
+# 設定ファイル
 settings.json
