@@ -10,20 +10,9 @@ require "json"
 # 作業ディレクトリのパス
 WORKING_DIRECTORY_PATH = __dir__.encode("UTF-8").freeze
 
-# 設定ファイルのパス
-settings_file_path = "#{WORKING_DIRECTORY_PATH}/settings.json"
-
-# 設定ファイルが存在しない場合、テンプレートからコピーする
-if !File.exist?(settings_file_path)
-  FileUtils.cp_r("#{WORKING_DIRECTORY_PATH}/settings.json.templete", settings_file_path)
-
-  puts "settings.json が見つからなかったため、settings.json を初期化しました。"
-  exit
-end
-
-# 設定を読み込む
+# 設定をロード
 begin
-  settings = File.open(settings_file_path) { |f| JSON.load(f) }
+  settings = File.open("#{WORKING_DIRECTORY_PATH}/settings.json") { |f| JSON.load(f) }
 rescue
   puts "settings.json を読み込めませんでした。"
   exit
