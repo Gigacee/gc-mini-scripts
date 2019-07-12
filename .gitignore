@@ -3,5 +3,5 @@
 *.wav
 *.xlsx
 
-# 設定ファイル
-settings.json
+# 環境設定ファイル
+config.json

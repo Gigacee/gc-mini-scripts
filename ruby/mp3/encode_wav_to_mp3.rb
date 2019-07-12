@@ -11,14 +11,14 @@ WORKING_DIRECTORY_PATH = __dir__.encode("UTF-8").freeze
 
 # 設定をロード
 begin
-  settings = File.open("#{WORKING_DIRECTORY_PATH}/settings.json") { |f| JSON.load(f) }
+  config = File.open("#{WORKING_DIRECTORY_PATH}/config.json") { |f| JSON.load(f) }
 rescue
-  puts "settings.json を読み込めませんでした。"
+  puts "config.json を読み込めませんでした。"
   exit
 end
 
 # 設定された引数を配列に変換
-lame_args = settings["lame_arg"].split(" ")
+lame_args = config["lame_arg"].split(" ")
 
 # エンコードに失敗したファイルを記憶しておく配列
 failed_files = []
@@ -28,7 +28,7 @@ Dir.glob("#{WORKING_DIRECTORY_PATH}/*.wav").each do |wav|
   dest = "#{File.dirname(wav)}/#{File.basename(wav, ".wav")}.mp3"
 
   command = []
-  command.push(settings["lame_path"])
+  command.push(config["lame_path"])
   command.concat(lame_args)
   command.push(wav)
   command.push(dest)
