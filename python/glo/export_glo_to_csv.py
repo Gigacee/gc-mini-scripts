@@ -35,15 +35,29 @@ for board in globoard.get_boards(board_fields):
     # 全カードのリストを作成
     cards = []
     for card in globoard.get_cards(board.id, card_fields, per_page=300):
+        # カードデータ保存用の辞書を用意
         row = {}
+
+        # 名前
         row["name"] = card.name
+
+        # 説明
+        # 改行は "\\n" に置換する
         if card.description is not None:
             row["description"] = card.description["text"].replace("\n", "\\n")
+
+        # カラム
         row["column"] = columns[card.column_id]
+
+        # ラベル
+        # 複数ある場合は "|" で区切る
         row["label"] = ""
         if card.labels is not None:
             for label in card.labels:
-                row["label"] += label.name
+                row["label"] += label.name + "|"
+        row["label"] = row["label"].rstrip("|")
+
+        # カードデータをリストに追加
         cards.append(row)
 
     # 全カードのリストを CSV に出力
