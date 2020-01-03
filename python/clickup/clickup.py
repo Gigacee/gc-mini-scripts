@@ -26,7 +26,9 @@ for cu_workspace in clickup.teams:
     for cu_space in cu_workspace.spaces:
         for cu_folder in cu_space.projects:
             text += cu_folder.name + "\n"
-            response = ClickUp.get(clickup, f"https://api.clickup.com/api/v2/folder/{cu_folder.id}")
+            response = ClickUp.get(
+                clickup, f"https://api.clickup.com/api/v2/folder/{cu_folder.id}"
+            )
             text += str(response) + "\n\n"
             # for cu_list in cu_folder.lists:
             #     response = ClickUp.get(clickup, f"https://api.clickup.com/api/v2/list/{cu_list.id}/view")
