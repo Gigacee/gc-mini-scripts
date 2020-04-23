@@ -6,5 +6,12 @@
 # 環境設定ファイル
 config.json
 
-# 結果を出力するディレクトリ
+# リソース
+src/
 dest/
+
+# エディター設定
+.vscode/
+
+# Python
+__pycache__/
