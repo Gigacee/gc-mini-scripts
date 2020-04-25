@@ -6,11 +6,11 @@ import json
 import logging
 import os
 import tweepy
-from g_module import g_twitter, g_tsv
+from modules import g_twitter, g_tsv
 
 # 定数
 PWD = os.path.dirname(os.path.abspath(__file__))
-DEST_TSV_PATH = f"{PWD}/dest/tweet.tsv"
+DEST_TSV_PATH = f"{PWD}/resources/tweet.tsv"
 
 # ロギング設定
 logging.basicConfig(level=logging.INFO, format="[%(levelname)s] %(message)s")
@@ -32,8 +32,8 @@ with open(DEST_TSV_PATH, "a", encoding="utf_8", newline="") as dest:
         tweepy.Cursor(g_twitter.api.user_timeline, tweet_mode="extended").items()
     ):
         # DEBUG ============================================================
-        if i > 10:
-            exit()
+        # if i > 10:
+        #     exit()
         # ==================================================================
 
         # ツイートがすでに書き込まれていたらスキップ
