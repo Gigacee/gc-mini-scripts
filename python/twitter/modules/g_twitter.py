@@ -30,6 +30,7 @@ def get_reply_status(status_id):
         response = json.loads(e.response.text)
         if (
             True
+            and response["errors"][0]["code"] != 136
             and response["errors"][0]["code"] != 144
             and response["errors"][0]["code"] != 179
         ):
