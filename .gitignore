@@ -1,16 +1,17 @@
-# 動作テスト用のファイル
-*.mp3
-*.wav
-*.xlsx
+# エディター設定
+.vscode/
 
 # 環境設定ファイル
 config.json
 
-# リソース
-resources/
+# 入出力ディレクトリ
+in/
+out/
 
-# エディター設定
-.vscode/
+# 動作テスト用のファイル（削除予定）
+*.mp3
+*.wav
+*.xlsx
 
 # Python
 __pycache__/

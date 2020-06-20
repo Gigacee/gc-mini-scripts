@@ -11,7 +11,7 @@ from modules import g_twitter
 
 # 定数
 PWD = os.path.dirname(os.path.abspath(__file__))
-SRC_TSV_PATH = f"{PWD}/resources/delete.tsv"
+SRC_TSV_PATH = f"{PWD}/in/delete.tsv"
 
 # ロギング設定
 logging.basicConfig(level=logging.INFO, format="[%(levelname)s] %(message)s")

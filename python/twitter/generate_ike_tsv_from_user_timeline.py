@@ -10,7 +10,7 @@ from modules import g_twitter, g_tsv
 
 # 定数
 PWD = os.path.dirname(os.path.abspath(__file__))
-DEST_TSV_PATH = f"{PWD}/resources/like.tsv"
+DEST_TSV_PATH = f"{PWD}/out/like.tsv"
 
 # ロギング設定
 logging.basicConfig(level=logging.INFO, format="[%(levelname)s] %(message)s")
