@@ -62,7 +62,7 @@ for board in globoard.get_boards(board_fields):
 
     # 全カードのリストを CSV に出力
     with open(
-        f"{dest_dir_path}/{board.name}.csv", "wt", encoding="utf-8", newline=""
+        f"{dest_dir_path}/{board.name}.csv", "wt", encoding="utf_8", newline=""
     ) as file:
         writer = csv.DictWriter(file, ["name", "description", "column", "label"])
         writer.writeheader()

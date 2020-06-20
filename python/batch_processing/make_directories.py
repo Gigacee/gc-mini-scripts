@@ -14,7 +14,7 @@ if not os.path.exists(csv_path):
     print("Error: table.csv does not exist.")
     exit()
 
-with open(csv_path, "r", encoding="utf-8") as f:
+with open(csv_path, "r", encoding="utf_8") as f:
     reader = csv.reader(f)
 
     for row in reader:

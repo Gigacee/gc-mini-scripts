@@ -31,8 +31,10 @@ for cu_workspace in clickup.teams:
             )
             text += str(response) + "\n\n"
             # for cu_list in cu_folder.lists:
-            #     response = ClickUp.get(clickup, f"https://api.clickup.com/api/v2/list/{cu_list.id}/view")
+            #     response = ClickUp.get(
+            #         clickup, f"https://api.clickup.com/api/v2/list/{cu_list.id}/view"
+            #     )
             #     text += str(response) + "\n\n"
 
-with open(f"{dest_dir_path}/res.txt", "wt", encoding="utf-8") as file:
+with open(f"{dest_dir_path}/res.txt", "wt", encoding="utf_8") as file:
     file.write(text)
