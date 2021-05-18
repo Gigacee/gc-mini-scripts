@@ -1,3 +1,3 @@
-# Gc Mini Scripts
+# Mini Scripts
 
 勉強を兼ねて作成した、ちょっとしたスクリプトを置いてあります。
