@@ -1,6 +1,3 @@
-# エディター設定
-.vscode/
-
 # 環境設定ファイル
 config.json
 
@@ -13,8 +10,11 @@ out/
 *.wav
 *.xlsx
 
-# Python
+# Python cache directory
 __pycache__/
+
+# Visual Studio Code cache directory
+.vscode/
 
 # File to keep an empty directory
 !/**/.gitkeep
